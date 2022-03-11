@@ -5,6 +5,8 @@
 
     luch_counter.$inject=['$scope']
     function luch_counter($scope){
+        $scope.lunchMenu='';
+        $scope.result = '';
         $scope.decide_quantity = function(){
             lunch_items_count = $scope.lunchMenu.split(",").length;
             if(lunch_items_count>3){
