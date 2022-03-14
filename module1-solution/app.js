@@ -1,6 +1,6 @@
 (function(){
     'use strict'
-    angular.model('LunchCheck',[])
+    angular.module('LunchCheck',[])
     .controller('LunchCheckController',luch_counter);
 
     luch_counter.$inject=['$scope']
@@ -8,15 +8,16 @@
         $scope.lunchMenu='';
         $scope.result = '';
         $scope.decide_quantity = function(){
-            lunch_items_count = $scope.lunchMenu.split(",").length;
-            if(lunch_items_count>3){
-                $scope.result = "Too much!"
-            }
-            else if(lunch_items_count==0){
+            if( $scope.lunchMenu.length == 0)
                 $scope.result = "Please enter data first"
-            }
             else{
-                $scope.result = "Enjoy!"
+                var lunch_items_count = $scope.lunchMenu.split(",").length;
+                if(lunch_items_count>3){
+                    $scope.result = "Too much!"
+                }
+                else{
+                    $scope.result = "Enjoy!"
+                }
             }
         }
         
