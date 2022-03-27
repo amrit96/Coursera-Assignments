@@ -36,6 +36,14 @@
                 {
                     'item': "Apples",
                     'quantity': 5
+                },
+                {
+                    'item': "Banana",
+                    'quantity': 5
+                },
+                {
+                    'item': "Pineapples",
+                    'quantity': 5
                 }
             ],
             'bought': []
